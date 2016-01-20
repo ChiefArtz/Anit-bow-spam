@@ -1,0 +1,6 @@
+name: Anti-bow spam
+author: SavionLegendZzz
+api: [1.12.0]
+version: "1.0"
+description: Stop players from bow spaming
+load: POSTWORLD
