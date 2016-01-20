@@ -25,7 +25,7 @@ class main extends PluginBase implements Listener{
 			return;
 		}
 		array_push($this->shooter, $p->getName());
-		 	$task = new Task($this, $p->getPlayer());
+		 	$task = new Task($this, $p);
 		 	$this->getServer()->getScheduler()->scheduleDelayedTask($task, 20*$this->config->get("Time"));
 		}
 		}
