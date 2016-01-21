@@ -2,10 +2,11 @@
 
 namespace ABS;
 
+use pocketmine\utils\Config;
 use pocketmine\Player;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use pocektmine\event\entity\EntityShootBowEvent as Bow;
+use pocketmine\event\entity\EntityShootBowEvent as Bow;
 
 class main extends PluginBase implements Listener{
 	public $shooter = array();
@@ -18,7 +19,7 @@ class main extends PluginBase implements Listener{
 		}
 		
 		public function onBowShoot(Bow $ev){
-		$p = $ev->getPlayer();
+		$p = $ev->getEntity();
 		if(in_array($p->getName(), $this->shooter)){
 			$ev->setCancelled();
 			$p->sendMessage("You cant shoot a bow at the moment!");
