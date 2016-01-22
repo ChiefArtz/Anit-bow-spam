@@ -22,7 +22,7 @@ class main extends PluginBase implements Listener{
 		$p = $ev->getEntity();
 		if(in_array($p->getName(), $this->shooter)){
 			$ev->setCancelled();
-			$p->sendMessage("You cant shoot a bow at the moment!");
+			$p->sendTip("You can't shoot with bow at this moment!");
 			return;
 		}
 		array_push($this->shooter, $p->getName());
